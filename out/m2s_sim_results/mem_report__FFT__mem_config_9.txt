@@ -1,0 +1,2401 @@
+; Report for caches, TLBs, and main memory
+;    Accesses - Total number of accesses
+;    Hits, Misses - Accesses resulting in hits/misses
+;    HitRatio - Hits divided by accesses
+;    Evictions - Invalidated or replaced cache blocks
+;    Retries - For L1 caches, accesses that were retried
+;    ReadRetries, WriteRetries, NCWriteRetries - Read/Write retried accesses
+;    NoRetryAccesses - Number of accesses that were not retried
+;    NoRetryHits, NoRetryMisses - Hits and misses for not retried accesses
+;    NoRetryHitRatio - NoRetryHits divided by NoRetryAccesses
+;    NoRetryReads, NoRetryWrites - Not retried reads and writes
+;    Reads, Writes, NCWrites - Total read/write accesses
+;    BlockingReads, BlockingWrites, BlockingNCWrites - Reads/writes coming from lower-level cache
+;    NonBlockingReads, NonBlockingWrites, NonBlockingNCWrites - Coming from upper-level cache
+
+
+[ mm-0 ]
+
+Sets = 128
+Assoc = 8
+Policy = LRU
+BlockSize = 1024
+Latency = 100
+Ports = 2
+
+Accesses = 6394
+Hits = 1897
+Misses = 4497
+HitRatio = 0.2967
+Evictions = 3473
+Retries = 0
+
+Reads = 5676
+ReadRetries = 0
+BlockingReads = 0
+NonBlockingReads = 5676
+ReadHits = 1179
+ReadMisses = 4497
+
+Writes = 718
+WriteRetries = 0
+BlockingWrites = 0
+NonBlockingWrites = 718
+WriteHits = 718
+WriteMisses = 0
+
+NCWrites = 0
+NCWriteRetries = 0
+NCBlockingWrites = 0
+NCNonBlockingWrites = 0
+NCWriteHits = 0
+NCWriteMisses = 0
+Prefetches = 0
+PrefetchAborts = 0
+UselessPrefetches = 0
+
+NoRetryAccesses = 6394
+NoRetryHits = 1897
+NoRetryMisses = 4497
+NoRetryHitRatio = 0.2967
+NoRetryReads = 5676
+NoRetryReadHits = 1179
+NoRetryReadMisses = 4497
+NoRetryWrites = 718
+NoRetryWriteHits = 718
+NoRetryWriteMisses = 0
+NoRetryNCWrites = 0
+NoRetryNCWriteHits = 0
+NoRetryNCWriteMisses = 0
+
+
+[ mm-1 ]
+
+Sets = 128
+Assoc = 8
+Policy = LRU
+BlockSize = 1024
+Latency = 100
+Ports = 2
+
+Accesses = 5687
+Hits = 1190
+Misses = 4497
+HitRatio = 0.2092
+Evictions = 3473
+Retries = 0
+
+Reads = 5687
+ReadRetries = 0
+BlockingReads = 0
+NonBlockingReads = 5687
+ReadHits = 1190
+ReadMisses = 4497
+
+Writes = 0
+WriteRetries = 0
+BlockingWrites = 0
+NonBlockingWrites = 0
+WriteHits = 0
+WriteMisses = 0
+
+NCWrites = 0
+NCWriteRetries = 0
+NCBlockingWrites = 0
+NCNonBlockingWrites = 0
+NCWriteHits = 0
+NCWriteMisses = 0
+Prefetches = 0
+PrefetchAborts = 0
+UselessPrefetches = 0
+
+NoRetryAccesses = 5687
+NoRetryHits = 1190
+NoRetryMisses = 4497
+NoRetryHitRatio = 0.2092
+NoRetryReads = 5687
+NoRetryReadHits = 1190
+NoRetryReadMisses = 4497
+NoRetryWrites = 0
+NoRetryWriteHits = 0
+NoRetryWriteMisses = 0
+NoRetryNCWrites = 0
+NoRetryNCWriteHits = 0
+NoRetryNCWriteMisses = 0
+
+
+[ mm-2 ]
+
+Sets = 128
+Assoc = 8
+Policy = LRU
+BlockSize = 1024
+Latency = 100
+Ports = 2
+
+Accesses = 6359
+Hits = 1867
+Misses = 4492
+HitRatio = 0.2936
+Evictions = 3468
+Retries = 0
+
+Reads = 5658
+ReadRetries = 0
+BlockingReads = 0
+NonBlockingReads = 5658
+ReadHits = 1166
+ReadMisses = 4492
+
+Writes = 701
+WriteRetries = 0
+BlockingWrites = 0
+NonBlockingWrites = 701
+WriteHits = 701
+WriteMisses = 0
+
+NCWrites = 0
+NCWriteRetries = 0
+NCBlockingWrites = 0
+NCNonBlockingWrites = 0
+NCWriteHits = 0
+NCWriteMisses = 0
+Prefetches = 0
+PrefetchAborts = 0
+UselessPrefetches = 0
+
+NoRetryAccesses = 6359
+NoRetryHits = 1867
+NoRetryMisses = 4492
+NoRetryHitRatio = 0.2936
+NoRetryReads = 5658
+NoRetryReadHits = 1166
+NoRetryReadMisses = 4492
+NoRetryWrites = 701
+NoRetryWriteHits = 701
+NoRetryWriteMisses = 0
+NoRetryNCWrites = 0
+NoRetryNCWriteHits = 0
+NoRetryNCWriteMisses = 0
+
+
+[ l3-0 ]
+
+Sets = 256
+Assoc = 16
+Policy = LRU
+BlockSize = 512
+Latency = 20
+Ports = 2
+
+Accesses = 26621
+Hits = 20944
+Misses = 5677
+HitRatio = 0.7867
+Evictions = 717
+Retries = 0
+
+Reads = 17303
+ReadRetries = 0
+BlockingReads = 0
+NonBlockingReads = 17303
+ReadHits = 11626
+ReadMisses = 5677
+
+Writes = 9318
+WriteRetries = 0
+BlockingWrites = 3805
+NonBlockingWrites = 5513
+WriteHits = 9318
+WriteMisses = 0
+
+NCWrites = 0
+NCWriteRetries = 0
+NCBlockingWrites = 0
+NCNonBlockingWrites = 0
+NCWriteHits = 0
+NCWriteMisses = 0
+Prefetches = 0
+PrefetchAborts = 0
+UselessPrefetches = 0
+
+NoRetryAccesses = 26621
+NoRetryHits = 20944
+NoRetryMisses = 5677
+NoRetryHitRatio = 0.7867
+NoRetryReads = 17303
+NoRetryReadHits = 11626
+NoRetryReadMisses = 5677
+NoRetryWrites = 9318
+NoRetryWriteHits = 9318
+NoRetryWriteMisses = 0
+NoRetryNCWrites = 0
+NoRetryNCWriteHits = 0
+NoRetryNCWriteMisses = 0
+
+
+[ l3-1 ]
+
+Sets = 256
+Assoc = 16
+Policy = LRU
+BlockSize = 512
+Latency = 20
+Ports = 2
+
+Accesses = 27560
+Hits = 21873
+Misses = 5687
+HitRatio = 0.7937
+Evictions = 0
+Retries = 0
+
+Reads = 16439
+ReadRetries = 0
+BlockingReads = 0
+NonBlockingReads = 16439
+ReadHits = 10752
+ReadMisses = 5687
+
+Writes = 11121
+WriteRetries = 0
+BlockingWrites = 4367
+NonBlockingWrites = 6754
+WriteHits = 11121
+WriteMisses = 0
+
+NCWrites = 0
+NCWriteRetries = 0
+NCBlockingWrites = 0
+NCNonBlockingWrites = 0
+NCWriteHits = 0
+NCWriteMisses = 0
+Prefetches = 0
+PrefetchAborts = 0
+UselessPrefetches = 0
+
+NoRetryAccesses = 27560
+NoRetryHits = 21873
+NoRetryMisses = 5687
+NoRetryHitRatio = 0.7937
+NoRetryReads = 16439
+NoRetryReadHits = 10752
+NoRetryReadMisses = 5687
+NoRetryWrites = 11121
+NoRetryWriteHits = 11121
+NoRetryWriteMisses = 0
+NoRetryNCWrites = 0
+NoRetryNCWriteHits = 0
+NoRetryNCWriteMisses = 0
+
+
+[ l3-2 ]
+
+Sets = 256
+Assoc = 16
+Policy = LRU
+BlockSize = 512
+Latency = 20
+Ports = 2
+
+Accesses = 25980
+Hits = 20322
+Misses = 5658
+HitRatio = 0.7822
+Evictions = 701
+Retries = 0
+
+Reads = 16521
+ReadRetries = 0
+BlockingReads = 0
+NonBlockingReads = 16521
+ReadHits = 10863
+ReadMisses = 5658
+
+Writes = 9459
+WriteRetries = 0
+BlockingWrites = 3806
+NonBlockingWrites = 5653
+WriteHits = 9459
+WriteMisses = 0
+
+NCWrites = 0
+NCWriteRetries = 0
+NCBlockingWrites = 0
+NCNonBlockingWrites = 0
+NCWriteHits = 0
+NCWriteMisses = 0
+Prefetches = 0
+PrefetchAborts = 0
+UselessPrefetches = 0
+
+NoRetryAccesses = 25980
+NoRetryHits = 20322
+NoRetryMisses = 5658
+NoRetryHitRatio = 0.7822
+NoRetryReads = 16521
+NoRetryReadHits = 10863
+NoRetryReadMisses = 5658
+NoRetryWrites = 9459
+NoRetryWriteHits = 9459
+NoRetryWriteMisses = 0
+NoRetryNCWrites = 0
+NoRetryNCWriteHits = 0
+NoRetryNCWriteMisses = 0
+
+
+[ l2-0 ]
+
+Sets = 128
+Assoc = 16
+Policy = LRU
+BlockSize = 64
+Latency = 10
+Ports = 2
+
+Accesses = 25016
+Hits = 14863
+Misses = 10153
+HitRatio = 0.5941
+Evictions = 3635
+Retries = 0
+
+Reads = 15790
+ReadRetries = 0
+BlockingReads = 3866
+NonBlockingReads = 11924
+ReadHits = 5637
+ReadMisses = 10153
+
+Writes = 9157
+WriteRetries = 0
+BlockingWrites = 2423
+NonBlockingWrites = 6734
+WriteHits = 9157
+WriteMisses = 0
+
+NCWrites = 0
+NCWriteRetries = 0
+NCBlockingWrites = 0
+NCNonBlockingWrites = 0
+NCWriteHits = 0
+NCWriteMisses = 0
+Prefetches = 0
+PrefetchAborts = 0
+UselessPrefetches = 0
+
+NoRetryAccesses = 25016
+NoRetryHits = 14863
+NoRetryMisses = 10153
+NoRetryHitRatio = 0.5941
+NoRetryReads = 15790
+NoRetryReadHits = 5637
+NoRetryReadMisses = 10153
+NoRetryWrites = 9157
+NoRetryWriteHits = 9157
+NoRetryWriteMisses = 0
+NoRetryNCWrites = 0
+NoRetryNCWriteHits = 0
+NoRetryNCWriteMisses = 0
+
+
+[ l2-1 ]
+
+Sets = 128
+Assoc = 16
+Policy = LRU
+BlockSize = 64
+Latency = 10
+Ports = 2
+
+Accesses = 24873
+Hits = 14939
+Misses = 9934
+HitRatio = 0.6006
+Evictions = 3546
+Retries = 0
+
+Reads = 15559
+ReadRetries = 0
+BlockingReads = 3842
+NonBlockingReads = 11717
+ReadHits = 5625
+ReadMisses = 9934
+
+Writes = 9247
+WriteRetries = 0
+BlockingWrites = 2495
+NonBlockingWrites = 6752
+WriteHits = 9247
+WriteMisses = 0
+
+NCWrites = 0
+NCWriteRetries = 0
+NCBlockingWrites = 0
+NCNonBlockingWrites = 0
+NCWriteHits = 0
+NCWriteMisses = 0
+Prefetches = 0
+PrefetchAborts = 0
+UselessPrefetches = 0
+
+NoRetryAccesses = 24873
+NoRetryHits = 14939
+NoRetryMisses = 9934
+NoRetryHitRatio = 0.6006
+NoRetryReads = 15559
+NoRetryReadHits = 5625
+NoRetryReadMisses = 9934
+NoRetryWrites = 9247
+NoRetryWriteHits = 9247
+NoRetryWriteMisses = 0
+NoRetryNCWrites = 0
+NoRetryNCWriteHits = 0
+NoRetryNCWriteMisses = 0
+
+
+[ l2-2 ]
+
+Sets = 128
+Assoc = 16
+Policy = LRU
+BlockSize = 64
+Latency = 10
+Ports = 2
+
+Accesses = 24813
+Hits = 14773
+Misses = 10040
+HitRatio = 0.5954
+Evictions = 3568
+Retries = 0
+
+Reads = 15569
+ReadRetries = 0
+BlockingReads = 3828
+NonBlockingReads = 11741
+ReadHits = 5529
+ReadMisses = 10040
+
+Writes = 9171
+WriteRetries = 0
+BlockingWrites = 2444
+NonBlockingWrites = 6727
+WriteHits = 9171
+WriteMisses = 0
+
+NCWrites = 0
+NCWriteRetries = 0
+NCBlockingWrites = 0
+NCNonBlockingWrites = 0
+NCWriteHits = 0
+NCWriteMisses = 0
+Prefetches = 0
+PrefetchAborts = 0
+UselessPrefetches = 0
+
+NoRetryAccesses = 24813
+NoRetryHits = 14773
+NoRetryMisses = 10040
+NoRetryHitRatio = 0.5954
+NoRetryReads = 15569
+NoRetryReadHits = 5529
+NoRetryReadMisses = 10040
+NoRetryWrites = 9171
+NoRetryWriteHits = 9171
+NoRetryWriteMisses = 0
+NoRetryNCWrites = 0
+NoRetryNCWriteHits = 0
+NoRetryNCWriteMisses = 0
+
+
+[ l2-3 ]
+
+Sets = 128
+Assoc = 16
+Policy = LRU
+BlockSize = 64
+Latency = 10
+Ports = 2
+
+Accesses = 24817
+Hits = 14810
+Misses = 10007
+HitRatio = 0.5968
+Evictions = 3575
+Retries = 0
+
+Reads = 15563
+ReadRetries = 0
+BlockingReads = 3828
+NonBlockingReads = 11735
+ReadHits = 5556
+ReadMisses = 10007
+
+Writes = 9189
+WriteRetries = 0
+BlockingWrites = 2438
+NonBlockingWrites = 6751
+WriteHits = 9189
+WriteMisses = 0
+
+NCWrites = 0
+NCWriteRetries = 0
+NCBlockingWrites = 0
+NCNonBlockingWrites = 0
+NCWriteHits = 0
+NCWriteMisses = 0
+Prefetches = 0
+PrefetchAborts = 0
+UselessPrefetches = 0
+
+NoRetryAccesses = 24817
+NoRetryHits = 14810
+NoRetryMisses = 10007
+NoRetryHitRatio = 0.5968
+NoRetryReads = 15563
+NoRetryReadHits = 5556
+NoRetryReadMisses = 10007
+NoRetryWrites = 9189
+NoRetryWriteHits = 9189
+NoRetryWriteMisses = 0
+NoRetryNCWrites = 0
+NoRetryNCWriteHits = 0
+NoRetryNCWriteMisses = 0
+
+
+[ l2-4 ]
+
+Sets = 128
+Assoc = 16
+Policy = LRU
+BlockSize = 64
+Latency = 10
+Ports = 2
+
+Accesses = 24931
+Hits = 14801
+Misses = 10130
+HitRatio = 0.5937
+Evictions = 3595
+Retries = 0
+
+Reads = 15667
+ReadRetries = 0
+BlockingReads = 3835
+NonBlockingReads = 11832
+ReadHits = 5537
+ReadMisses = 10130
+
+Writes = 9195
+WriteRetries = 0
+BlockingWrites = 2440
+NonBlockingWrites = 6755
+WriteHits = 9195
+WriteMisses = 0
+
+NCWrites = 0
+NCWriteRetries = 0
+NCBlockingWrites = 0
+NCNonBlockingWrites = 0
+NCWriteHits = 0
+NCWriteMisses = 0
+Prefetches = 0
+PrefetchAborts = 0
+UselessPrefetches = 0
+
+NoRetryAccesses = 24931
+NoRetryHits = 14801
+NoRetryMisses = 10130
+NoRetryHitRatio = 0.5937
+NoRetryReads = 15667
+NoRetryReadHits = 5537
+NoRetryReadMisses = 10130
+NoRetryWrites = 9195
+NoRetryWriteHits = 9195
+NoRetryWriteMisses = 0
+NoRetryNCWrites = 0
+NoRetryNCWriteHits = 0
+NoRetryNCWriteMisses = 0
+
+
+[ l1-cu00 ]
+
+Sets = 64
+Assoc = 4
+Policy = LRU
+BlockSize = 64
+Latency = 1
+Ports = 2
+
+Accesses = 263368
+Hits = 258421
+Misses = 4947
+HitRatio = 0.9812
+Evictions = 2865
+Retries = 979
+
+Reads = 520759
+ReadRetries = 979
+BlockingReads = 134373
+NonBlockingReads = 0
+ReadHits = 129426
+ReadMisses = 391333
+
+Writes = 867
+WriteRetries = 0
+BlockingWrites = 867
+NonBlockingWrites = 0
+WriteHits = 867
+WriteMisses = 0
+
+NCWrites = 512512
+NCWriteRetries = 0
+NCBlockingWrites = 128128
+NCNonBlockingWrites = 0
+NCWriteHits = 128128
+NCWriteMisses = 384384
+Prefetches = 0
+PrefetchAborts = 0
+UselessPrefetches = 0
+
+NoRetryAccesses = 262389
+NoRetryHits = 258421
+NoRetryMisses = 3968
+NoRetryHitRatio = 0.9849
+NoRetryReads = 133394
+NoRetryReadHits = 129426
+NoRetryReadMisses = 3968
+NoRetryWrites = 867
+NoRetryWriteHits = 867
+NoRetryWriteMisses = 0
+NoRetryNCWrites = 128128
+NoRetryNCWriteHits = 128128
+NoRetryNCWriteMisses = 0
+
+
+[ l1-cu01 ]
+
+Sets = 64
+Assoc = 4
+Policy = LRU
+BlockSize = 64
+Latency = 1
+Ports = 2
+
+Accesses = 267285
+Hits = 259887
+Misses = 7398
+HitRatio = 0.9723
+Evictions = 3889
+Retries = 2429
+
+Reads = 523692
+ReadRetries = 2429
+BlockingReads = 138307
+NonBlockingReads = 0
+ReadHits = 130909
+ReadMisses = 392783
+
+Writes = 850
+WriteRetries = 0
+BlockingWrites = 850
+NonBlockingWrites = 0
+WriteHits = 850
+WriteMisses = 0
+
+NCWrites = 512512
+NCWriteRetries = 0
+NCBlockingWrites = 128128
+NCNonBlockingWrites = 0
+NCWriteHits = 128128
+NCWriteMisses = 384384
+Prefetches = 0
+PrefetchAborts = 0
+UselessPrefetches = 0
+
+NoRetryAccesses = 264856
+NoRetryHits = 259887
+NoRetryMisses = 4969
+NoRetryHitRatio = 0.9812
+NoRetryReads = 135878
+NoRetryReadHits = 130909
+NoRetryReadMisses = 4969
+NoRetryWrites = 850
+NoRetryWriteHits = 850
+NoRetryWriteMisses = 0
+NoRetryNCWrites = 128128
+NoRetryNCWriteHits = 128128
+NoRetryNCWriteMisses = 0
+
+
+[ l1-cu02 ]
+
+Sets = 64
+Assoc = 4
+Policy = LRU
+BlockSize = 64
+Latency = 1
+Ports = 2
+
+Accesses = 262983
+Hits = 258107
+Misses = 4876
+HitRatio = 0.9815
+Evictions = 2854
+Retries = 912
+
+Reads = 520122
+ReadRetries = 912
+BlockingReads = 134122
+NonBlockingReads = 0
+ReadHits = 129246
+ReadMisses = 390876
+
+Writes = 861
+WriteRetries = 0
+BlockingWrites = 861
+NonBlockingWrites = 0
+WriteHits = 861
+WriteMisses = 0
+
+NCWrites = 512000
+NCWriteRetries = 0
+NCBlockingWrites = 128000
+NCNonBlockingWrites = 0
+NCWriteHits = 128000
+NCWriteMisses = 384000
+Prefetches = 0
+PrefetchAborts = 0
+UselessPrefetches = 0
+
+NoRetryAccesses = 262071
+NoRetryHits = 258107
+NoRetryMisses = 3964
+NoRetryHitRatio = 0.9849
+NoRetryReads = 133210
+NoRetryReadHits = 129246
+NoRetryReadMisses = 3964
+NoRetryWrites = 861
+NoRetryWriteHits = 861
+NoRetryWriteMisses = 0
+NoRetryNCWrites = 128000
+NoRetryNCWriteHits = 128000
+NoRetryNCWriteMisses = 0
+
+
+[ l1-cu03 ]
+
+Sets = 64
+Assoc = 4
+Policy = LRU
+BlockSize = 64
+Latency = 1
+Ports = 2
+
+Accesses = 266947
+Hits = 259613
+Misses = 7334
+HitRatio = 0.9725
+Evictions = 3876
+Retries = 2370
+
+Reads = 523097
+ReadRetries = 2370
+BlockingReads = 138097
+NonBlockingReads = 0
+ReadHits = 130763
+ReadMisses = 392334
+
+Writes = 850
+WriteRetries = 0
+BlockingWrites = 850
+NonBlockingWrites = 0
+WriteHits = 850
+WriteMisses = 0
+
+NCWrites = 512000
+NCWriteRetries = 0
+NCBlockingWrites = 128000
+NCNonBlockingWrites = 0
+NCWriteHits = 128000
+NCWriteMisses = 384000
+Prefetches = 0
+PrefetchAborts = 0
+UselessPrefetches = 0
+
+NoRetryAccesses = 264577
+NoRetryHits = 259613
+NoRetryMisses = 4964
+NoRetryHitRatio = 0.9812
+NoRetryReads = 135727
+NoRetryReadHits = 130763
+NoRetryReadMisses = 4964
+NoRetryWrites = 850
+NoRetryWriteHits = 850
+NoRetryWriteMisses = 0
+NoRetryNCWrites = 128000
+NoRetryNCWriteHits = 128000
+NoRetryNCWriteMisses = 0
+
+
+[ l1-cu04 ]
+
+Sets = 64
+Assoc = 4
+Policy = LRU
+BlockSize = 64
+Latency = 1
+Ports = 2
+
+Accesses = 262451
+Hits = 257992
+Misses = 4459
+HitRatio = 0.983
+Evictions = 2882
+Retries = 495
+
+Reads = 519600
+ReadRetries = 495
+BlockingReads = 133600
+NonBlockingReads = 0
+ReadHits = 129141
+ReadMisses = 390459
+
+Writes = 851
+WriteRetries = 0
+BlockingWrites = 851
+NonBlockingWrites = 0
+WriteHits = 851
+WriteMisses = 0
+
+NCWrites = 512000
+NCWriteRetries = 0
+NCBlockingWrites = 128000
+NCNonBlockingWrites = 0
+NCWriteHits = 128000
+NCWriteMisses = 384000
+Prefetches = 0
+PrefetchAborts = 0
+UselessPrefetches = 0
+
+NoRetryAccesses = 261956
+NoRetryHits = 257992
+NoRetryMisses = 3964
+NoRetryHitRatio = 0.9849
+NoRetryReads = 133105
+NoRetryReadHits = 129141
+NoRetryReadMisses = 3964
+NoRetryWrites = 851
+NoRetryWriteHits = 851
+NoRetryWriteMisses = 0
+NoRetryNCWrites = 128000
+NoRetryNCWriteHits = 128000
+NoRetryNCWriteMisses = 0
+
+
+[ l1-cu05 ]
+
+Sets = 64
+Assoc = 4
+Policy = LRU
+BlockSize = 64
+Latency = 1
+Ports = 2
+
+Accesses = 266669
+Hits = 259606
+Misses = 7063
+HitRatio = 0.9735
+Evictions = 3870
+Retries = 2097
+
+Reads = 522810
+ReadRetries = 2097
+BlockingReads = 137810
+NonBlockingReads = 0
+ReadHits = 130747
+ReadMisses = 392063
+
+Writes = 859
+WriteRetries = 0
+BlockingWrites = 859
+NonBlockingWrites = 0
+WriteHits = 859
+WriteMisses = 0
+
+NCWrites = 512000
+NCWriteRetries = 0
+NCBlockingWrites = 128000
+NCNonBlockingWrites = 0
+NCWriteHits = 128000
+NCWriteMisses = 384000
+Prefetches = 0
+PrefetchAborts = 0
+UselessPrefetches = 0
+
+NoRetryAccesses = 264572
+NoRetryHits = 259606
+NoRetryMisses = 4966
+NoRetryHitRatio = 0.9812
+NoRetryReads = 135713
+NoRetryReadHits = 130747
+NoRetryReadMisses = 4966
+NoRetryWrites = 859
+NoRetryWriteHits = 859
+NoRetryWriteMisses = 0
+NoRetryNCWrites = 128000
+NoRetryNCWriteHits = 128000
+NoRetryNCWriteMisses = 0
+
+
+[ l1-cu06 ]
+
+Sets = 64
+Assoc = 4
+Policy = LRU
+BlockSize = 64
+Latency = 1
+Ports = 2
+
+Accesses = 262036
+Hits = 257922
+Misses = 4114
+HitRatio = 0.9843
+Evictions = 2882
+Retries = 148
+
+Reads = 519176
+ReadRetries = 148
+BlockingReads = 133176
+NonBlockingReads = 0
+ReadHits = 129062
+ReadMisses = 390114
+
+Writes = 860
+WriteRetries = 0
+BlockingWrites = 860
+NonBlockingWrites = 0
+WriteHits = 860
+WriteMisses = 0
+
+NCWrites = 512000
+NCWriteRetries = 0
+NCBlockingWrites = 128000
+NCNonBlockingWrites = 0
+NCWriteHits = 128000
+NCWriteMisses = 384000
+Prefetches = 0
+PrefetchAborts = 0
+UselessPrefetches = 0
+
+NoRetryAccesses = 261888
+NoRetryHits = 257922
+NoRetryMisses = 3966
+NoRetryHitRatio = 0.9849
+NoRetryReads = 133028
+NoRetryReadHits = 129062
+NoRetryReadMisses = 3966
+NoRetryWrites = 860
+NoRetryWriteHits = 860
+NoRetryWriteMisses = 0
+NoRetryNCWrites = 128000
+NoRetryNCWriteHits = 128000
+NoRetryNCWriteMisses = 0
+
+
+[ l1-cu07 ]
+
+Sets = 64
+Assoc = 4
+Policy = LRU
+BlockSize = 64
+Latency = 1
+Ports = 2
+
+Accesses = 266922
+Hits = 259642
+Misses = 7280
+HitRatio = 0.9727
+Evictions = 3863
+Retries = 2314
+
+Reads = 523069
+ReadRetries = 2314
+BlockingReads = 138069
+NonBlockingReads = 0
+ReadHits = 130789
+ReadMisses = 392280
+
+Writes = 853
+WriteRetries = 0
+BlockingWrites = 853
+NonBlockingWrites = 0
+WriteHits = 853
+WriteMisses = 0
+
+NCWrites = 512000
+NCWriteRetries = 0
+NCBlockingWrites = 128000
+NCNonBlockingWrites = 0
+NCWriteHits = 128000
+NCWriteMisses = 384000
+Prefetches = 0
+PrefetchAborts = 0
+UselessPrefetches = 0
+
+NoRetryAccesses = 264608
+NoRetryHits = 259642
+NoRetryMisses = 4966
+NoRetryHitRatio = 0.9812
+NoRetryReads = 135755
+NoRetryReadHits = 130789
+NoRetryReadMisses = 4966
+NoRetryWrites = 853
+NoRetryWriteHits = 853
+NoRetryWriteMisses = 0
+NoRetryNCWrites = 128000
+NoRetryNCWriteHits = 128000
+NoRetryNCWriteMisses = 0
+
+
+[ l1-cu08 ]
+
+Sets = 64
+Assoc = 4
+Policy = LRU
+BlockSize = 64
+Latency = 1
+Ports = 2
+
+Accesses = 262294
+Hits = 257984
+Misses = 4310
+HitRatio = 0.9836
+Evictions = 2865
+Retries = 345
+
+Reads = 519426
+ReadRetries = 345
+BlockingReads = 133426
+NonBlockingReads = 0
+ReadHits = 129116
+ReadMisses = 390310
+
+Writes = 868
+WriteRetries = 0
+BlockingWrites = 868
+NonBlockingWrites = 0
+WriteHits = 868
+WriteMisses = 0
+
+NCWrites = 512000
+NCWriteRetries = 0
+NCBlockingWrites = 128000
+NCNonBlockingWrites = 0
+NCWriteHits = 128000
+NCWriteMisses = 384000
+Prefetches = 0
+PrefetchAborts = 0
+UselessPrefetches = 0
+
+NoRetryAccesses = 261949
+NoRetryHits = 257984
+NoRetryMisses = 3965
+NoRetryHitRatio = 0.9849
+NoRetryReads = 133081
+NoRetryReadHits = 129116
+NoRetryReadMisses = 3965
+NoRetryWrites = 868
+NoRetryWriteHits = 868
+NoRetryWriteMisses = 0
+NoRetryNCWrites = 128000
+NoRetryNCWriteHits = 128000
+NoRetryNCWriteMisses = 0
+
+
+[ l1-cu09 ]
+
+Sets = 64
+Assoc = 4
+Policy = LRU
+BlockSize = 64
+Latency = 1
+Ports = 2
+
+Accesses = 266760
+Hits = 259592
+Misses = 7168
+HitRatio = 0.9731
+Evictions = 3873
+Retries = 2202
+
+Reads = 522906
+ReadRetries = 2202
+BlockingReads = 137906
+NonBlockingReads = 0
+ReadHits = 130738
+ReadMisses = 392168
+
+Writes = 854
+WriteRetries = 0
+BlockingWrites = 854
+NonBlockingWrites = 0
+WriteHits = 854
+WriteMisses = 0
+
+NCWrites = 512000
+NCWriteRetries = 0
+NCBlockingWrites = 128000
+NCNonBlockingWrites = 0
+NCWriteHits = 128000
+NCWriteMisses = 384000
+Prefetches = 0
+PrefetchAborts = 0
+UselessPrefetches = 0
+
+NoRetryAccesses = 264558
+NoRetryHits = 259592
+NoRetryMisses = 4966
+NoRetryHitRatio = 0.9812
+NoRetryReads = 135704
+NoRetryReadHits = 130738
+NoRetryReadMisses = 4966
+NoRetryWrites = 854
+NoRetryWriteHits = 854
+NoRetryWriteMisses = 0
+NoRetryNCWrites = 128000
+NoRetryNCWriteHits = 128000
+NoRetryNCWriteMisses = 0
+
+
+[ Network.net-l1-all-to-l2-all.General ]
+Transfers = 235668
+AverageMessageSize = 22.40
+AverageLatency = 4.0357
+
+[ Network.net-l1-all-to-l2-all.Link.link_<l2-0.out_buf_0>_<Switch.in_buf_0> ]
+Config.Bandwidth = 264
+TransferredMessages = 23733
+TransferredBytes = 763944
+BusyCycles = 23733
+BytesPerCycle = 0.0046
+Utilization = 0.0000
+
+[ Network.net-l1-all-to-l2-all.Link.link_<Switch.out_buf_0>_<l2-0.in_buf_0> ]
+Config.Bandwidth = 264
+TransferredMessages = 23733
+TransferredBytes = 299176
+BusyCycles = 23733
+BytesPerCycle = 0.0018
+Utilization = 0.0000
+
+[ Network.net-l1-all-to-l2-all.Link.link_<l2-1.out_buf_0>_<Switch.in_buf_1> ]
+Config.Bandwidth = 264
+TransferredMessages = 23546
+TransferredBytes = 763152
+BusyCycles = 23546
+BytesPerCycle = 0.0046
+Utilization = 0.0000
+
+[ Network.net-l1-all-to-l2-all.Link.link_<Switch.out_buf_1>_<l2-1.in_buf_0> ]
+Config.Bandwidth = 264
+TransferredMessages = 23546
+TransferredBytes = 298512
+BusyCycles = 23546
+BytesPerCycle = 0.0018
+Utilization = 0.0000
+
+[ Network.net-l1-all-to-l2-all.Link.link_<l2-2.out_buf_0>_<Switch.in_buf_2> ]
+Config.Bandwidth = 264
+TransferredMessages = 23464
+TransferredBytes = 756736
+BusyCycles = 23464
+BytesPerCycle = 0.0046
+Utilization = 0.0000
+
+[ Network.net-l1-all-to-l2-all.Link.link_<Switch.out_buf_2>_<l2-2.in_buf_0> ]
+Config.Bandwidth = 264
+TransferredMessages = 23464
+TransferredBytes = 292096
+BusyCycles = 23464
+BytesPerCycle = 0.0018
+Utilization = 0.0000
+
+[ Network.net-l1-all-to-l2-all.Link.link_<l2-3.out_buf_0>_<Switch.in_buf_3> ]
+Config.Bandwidth = 264
+TransferredMessages = 23515
+TransferredBytes = 759128
+BusyCycles = 23515
+BytesPerCycle = 0.0046
+Utilization = 0.0000
+
+[ Network.net-l1-all-to-l2-all.Link.link_<Switch.out_buf_3>_<l2-3.in_buf_0> ]
+Config.Bandwidth = 264
+TransferredMessages = 23515
+TransferredBytes = 295000
+BusyCycles = 23515
+BytesPerCycle = 0.0018
+Utilization = 0.0000
+
+[ Network.net-l1-all-to-l2-all.Link.link_<l2-4.out_buf_0>_<Switch.in_buf_4> ]
+Config.Bandwidth = 264
+TransferredMessages = 23576
+TransferredBytes = 757824
+BusyCycles = 23576
+BytesPerCycle = 0.0046
+Utilization = 0.0000
+
+[ Network.net-l1-all-to-l2-all.Link.link_<Switch.out_buf_4>_<l2-4.in_buf_0> ]
+Config.Bandwidth = 264
+TransferredMessages = 23576
+TransferredBytes = 293632
+BusyCycles = 23576
+BytesPerCycle = 0.0018
+Utilization = 0.0000
+
+[ Network.net-l1-all-to-l2-all.Link.link_<l1-cu00.out_buf_0>_<Switch.in_buf_5> ]
+Config.Bandwidth = 264
+TransferredMessages = 9867
+TransferredBytes = 132504
+BusyCycles = 9867
+BytesPerCycle = 0.0008
+Utilization = 0.0000
+
+[ Network.net-l1-all-to-l2-all.Link.link_<Switch.out_buf_5>_<l1-cu00.in_buf_0> ]
+Config.Bandwidth = 264
+TransferredMessages = 9867
+TransferredBytes = 332888
+BusyCycles = 9867
+BytesPerCycle = 0.0020
+Utilization = 0.0000
+
+[ Network.net-l1-all-to-l2-all.Link.link_<l1-cu01.out_buf_0>_<Switch.in_buf_6> ]
+Config.Bandwidth = 264
+TransferredMessages = 14367
+TransferredBytes = 168504
+BusyCycles = 14367
+BytesPerCycle = 0.0010
+Utilization = 0.0000
+
+[ Network.net-l1-all-to-l2-all.Link.link_<Switch.out_buf_6>_<l1-cu01.in_buf_0> ]
+Config.Bandwidth = 264
+TransferredMessages = 14367
+TransferredBytes = 432952
+BusyCycles = 14367
+BytesPerCycle = 0.0026
+Utilization = 0.0000
+
+[ Network.net-l1-all-to-l2-all.Link.link_<l1-cu02.out_buf_0>_<Switch.in_buf_7> ]
+Config.Bandwidth = 264
+TransferredMessages = 9730
+TransferredBytes = 131344
+BusyCycles = 9730
+BytesPerCycle = 0.0008
+Utilization = 0.0000
+
+[ Network.net-l1-all-to-l2-all.Link.link_<Switch.out_buf_7>_<l1-cu02.in_buf_0> ]
+Config.Bandwidth = 264
+TransferredMessages = 9730
+TransferredBytes = 331536
+BusyCycles = 9730
+BytesPerCycle = 0.0020
+Utilization = 0.0000
+
+[ Network.net-l1-all-to-l2-all.Link.link_<l1-cu03.out_buf_0>_<Switch.in_buf_8> ]
+Config.Bandwidth = 264
+TransferredMessages = 14285
+TransferredBytes = 167784
+BusyCycles = 14285
+BytesPerCycle = 0.0010
+Utilization = 0.0000
+
+[ Network.net-l1-all-to-l2-all.Link.link_<Switch.out_buf_8>_<l1-cu03.in_buf_0> ]
+Config.Bandwidth = 264
+TransferredMessages = 14285
+TransferredBytes = 431976
+BusyCycles = 14285
+BytesPerCycle = 0.0026
+Utilization = 0.0000
+
+[ Network.net-l1-all-to-l2-all.Link.link_<l1-cu04.out_buf_0>_<Switch.in_buf_9> ]
+Config.Bandwidth = 264
+TransferredMessages = 9267
+TransferredBytes = 127640
+BusyCycles = 9267
+BytesPerCycle = 0.0008
+Utilization = 0.0000
+
+[ Network.net-l1-all-to-l2-all.Link.link_<Switch.out_buf_9>_<l1-cu04.in_buf_0> ]
+Config.Bandwidth = 264
+TransferredMessages = 9267
+TransferredBytes = 327832
+BusyCycles = 9267
+BytesPerCycle = 0.0020
+Utilization = 0.0000
+
+[ Network.net-l1-all-to-l2-all.Link.link_<l1-cu05.out_buf_0>_<Switch.in_buf_10> ]
+Config.Bandwidth = 264
+TransferredMessages = 14003
+TransferredBytes = 165656
+BusyCycles = 14003
+BytesPerCycle = 0.0010
+Utilization = 0.0000
+
+[ Network.net-l1-all-to-l2-all.Link.link_<Switch.out_buf_10>_<l1-cu05.in_buf_0> ]
+Config.Bandwidth = 264
+TransferredMessages = 14003
+TransferredBytes = 429848
+BusyCycles = 14003
+BytesPerCycle = 0.0026
+Utilization = 0.0000
+
+[ Network.net-l1-all-to-l2-all.Link.link_<l1-cu06.out_buf_0>_<Switch.in_buf_11> ]
+Config.Bandwidth = 264
+TransferredMessages = 8889
+TransferredBytes = 124744
+BusyCycles = 8889
+BytesPerCycle = 0.0008
+Utilization = 0.0000
+
+[ Network.net-l1-all-to-l2-all.Link.link_<Switch.out_buf_11>_<l1-cu06.in_buf_0> ]
+Config.Bandwidth = 264
+TransferredMessages = 8889
+TransferredBytes = 324936
+BusyCycles = 8889
+BytesPerCycle = 0.0020
+Utilization = 0.0000
+
+[ Network.net-l1-all-to-l2-all.Link.link_<l1-cu07.out_buf_0>_<Switch.in_buf_12> ]
+Config.Bandwidth = 264
+TransferredMessages = 14218
+TransferredBytes = 167376
+BusyCycles = 14218
+BytesPerCycle = 0.0010
+Utilization = 0.0000
+
+[ Network.net-l1-all-to-l2-all.Link.link_<Switch.out_buf_12>_<l1-cu07.in_buf_0> ]
+Config.Bandwidth = 264
+TransferredMessages = 14218
+TransferredBytes = 431568
+BusyCycles = 14218
+BytesPerCycle = 0.0026
+Utilization = 0.0000
+
+[ Network.net-l1-all-to-l2-all.Link.link_<l1-cu08.out_buf_0>_<Switch.in_buf_13> ]
+Config.Bandwidth = 264
+TransferredMessages = 9104
+TransferredBytes = 126400
+BusyCycles = 9104
+BytesPerCycle = 0.0008
+Utilization = 0.0000
+
+[ Network.net-l1-all-to-l2-all.Link.link_<Switch.out_buf_13>_<l1-cu08.in_buf_0> ]
+Config.Bandwidth = 264
+TransferredMessages = 9104
+TransferredBytes = 326592
+BusyCycles = 9104
+BytesPerCycle = 0.0020
+Utilization = 0.0000
+
+[ Network.net-l1-all-to-l2-all.Link.link_<l1-cu09.out_buf_0>_<Switch.in_buf_14> ]
+Config.Bandwidth = 264
+TransferredMessages = 14104
+TransferredBytes = 166464
+BusyCycles = 14104
+BytesPerCycle = 0.0010
+Utilization = 0.0000
+
+[ Network.net-l1-all-to-l2-all.Link.link_<Switch.out_buf_14>_<l1-cu09.in_buf_0> ]
+Config.Bandwidth = 264
+TransferredMessages = 14104
+TransferredBytes = 430656
+BusyCycles = 14104
+BytesPerCycle = 0.0026
+Utilization = 0.0000
+
+[ Network.net-l1-all-to-l2-all.Node.l2-0 ]
+SentMessages = 23733
+SentBytes = 763944
+SendRate = 0.0046
+ReceivedMessages = 23733
+ReceivedBytes = 299176
+ReceiveRate = 0.0018
+in_buf_0.Size = 1032 
+in_buf_0.MessageOccupancy = 0.00
+in_buf_0.ByteOccupancy = 0.00
+in_buf_0.Utilization = 0.0000
+out_buf_0.Size = 1032 
+out_buf_0.MessageOccupancy = 0.00
+out_buf_0.ByteOccupancy = 0.00
+out_buf_0.Utilization = 0.0000
+
+[ Network.net-l1-all-to-l2-all.Node.l2-1 ]
+SentMessages = 23546
+SentBytes = 763152
+SendRate = 0.0046
+ReceivedMessages = 23546
+ReceivedBytes = 298512
+ReceiveRate = 0.0018
+in_buf_0.Size = 1032 
+in_buf_0.MessageOccupancy = 0.00
+in_buf_0.ByteOccupancy = 0.00
+in_buf_0.Utilization = 0.0000
+out_buf_0.Size = 1032 
+out_buf_0.MessageOccupancy = 0.00
+out_buf_0.ByteOccupancy = 0.00
+out_buf_0.Utilization = 0.0000
+
+[ Network.net-l1-all-to-l2-all.Node.l2-2 ]
+SentMessages = 23464
+SentBytes = 756736
+SendRate = 0.0046
+ReceivedMessages = 23464
+ReceivedBytes = 292096
+ReceiveRate = 0.0018
+in_buf_0.Size = 1032 
+in_buf_0.MessageOccupancy = 0.00
+in_buf_0.ByteOccupancy = 0.00
+in_buf_0.Utilization = 0.0000
+out_buf_0.Size = 1032 
+out_buf_0.MessageOccupancy = 0.00
+out_buf_0.ByteOccupancy = 0.00
+out_buf_0.Utilization = 0.0000
+
+[ Network.net-l1-all-to-l2-all.Node.l2-3 ]
+SentMessages = 23515
+SentBytes = 759128
+SendRate = 0.0046
+ReceivedMessages = 23515
+ReceivedBytes = 295000
+ReceiveRate = 0.0018
+in_buf_0.Size = 1032 
+in_buf_0.MessageOccupancy = 0.00
+in_buf_0.ByteOccupancy = 0.00
+in_buf_0.Utilization = 0.0000
+out_buf_0.Size = 1032 
+out_buf_0.MessageOccupancy = 0.00
+out_buf_0.ByteOccupancy = 0.00
+out_buf_0.Utilization = 0.0000
+
+[ Network.net-l1-all-to-l2-all.Node.l2-4 ]
+SentMessages = 23576
+SentBytes = 757824
+SendRate = 0.0046
+ReceivedMessages = 23576
+ReceivedBytes = 293632
+ReceiveRate = 0.0018
+in_buf_0.Size = 1032 
+in_buf_0.MessageOccupancy = 0.00
+in_buf_0.ByteOccupancy = 0.00
+in_buf_0.Utilization = 0.0000
+out_buf_0.Size = 1032 
+out_buf_0.MessageOccupancy = 0.00
+out_buf_0.ByteOccupancy = 0.00
+out_buf_0.Utilization = 0.0000
+
+[ Network.net-l1-all-to-l2-all.Node.l1-cu00 ]
+SentMessages = 9867
+SentBytes = 132504
+SendRate = 0.0008
+ReceivedMessages = 9867
+ReceivedBytes = 332888
+ReceiveRate = 0.0020
+in_buf_0.Size = 1032 
+in_buf_0.MessageOccupancy = 0.00
+in_buf_0.ByteOccupancy = 0.00
+in_buf_0.Utilization = 0.0000
+out_buf_0.Size = 1032 
+out_buf_0.MessageOccupancy = 0.00
+out_buf_0.ByteOccupancy = 0.00
+out_buf_0.Utilization = 0.0000
+
+[ Network.net-l1-all-to-l2-all.Node.l1-cu01 ]
+SentMessages = 14367
+SentBytes = 168504
+SendRate = 0.0010
+ReceivedMessages = 14367
+ReceivedBytes = 432952
+ReceiveRate = 0.0026
+in_buf_0.Size = 1032 
+in_buf_0.MessageOccupancy = 0.00
+in_buf_0.ByteOccupancy = 0.00
+in_buf_0.Utilization = 0.0000
+out_buf_0.Size = 1032 
+out_buf_0.MessageOccupancy = 0.00
+out_buf_0.ByteOccupancy = 0.00
+out_buf_0.Utilization = 0.0000
+
+[ Network.net-l1-all-to-l2-all.Node.l1-cu02 ]
+SentMessages = 9730
+SentBytes = 131344
+SendRate = 0.0008
+ReceivedMessages = 9730
+ReceivedBytes = 331536
+ReceiveRate = 0.0020
+in_buf_0.Size = 1032 
+in_buf_0.MessageOccupancy = 0.00
+in_buf_0.ByteOccupancy = 0.00
+in_buf_0.Utilization = 0.0000
+out_buf_0.Size = 1032 
+out_buf_0.MessageOccupancy = 0.00
+out_buf_0.ByteOccupancy = 0.00
+out_buf_0.Utilization = 0.0000
+
+[ Network.net-l1-all-to-l2-all.Node.l1-cu03 ]
+SentMessages = 14285
+SentBytes = 167784
+SendRate = 0.0010
+ReceivedMessages = 14285
+ReceivedBytes = 431976
+ReceiveRate = 0.0026
+in_buf_0.Size = 1032 
+in_buf_0.MessageOccupancy = 0.00
+in_buf_0.ByteOccupancy = 0.00
+in_buf_0.Utilization = 0.0000
+out_buf_0.Size = 1032 
+out_buf_0.MessageOccupancy = 0.00
+out_buf_0.ByteOccupancy = 0.00
+out_buf_0.Utilization = 0.0000
+
+[ Network.net-l1-all-to-l2-all.Node.l1-cu04 ]
+SentMessages = 9267
+SentBytes = 127640
+SendRate = 0.0008
+ReceivedMessages = 9267
+ReceivedBytes = 327832
+ReceiveRate = 0.0020
+in_buf_0.Size = 1032 
+in_buf_0.MessageOccupancy = 0.00
+in_buf_0.ByteOccupancy = 0.00
+in_buf_0.Utilization = 0.0000
+out_buf_0.Size = 1032 
+out_buf_0.MessageOccupancy = 0.00
+out_buf_0.ByteOccupancy = 0.00
+out_buf_0.Utilization = 0.0000
+
+[ Network.net-l1-all-to-l2-all.Node.l1-cu05 ]
+SentMessages = 14003
+SentBytes = 165656
+SendRate = 0.0010
+ReceivedMessages = 14003
+ReceivedBytes = 429848
+ReceiveRate = 0.0026
+in_buf_0.Size = 1032 
+in_buf_0.MessageOccupancy = 0.00
+in_buf_0.ByteOccupancy = 0.00
+in_buf_0.Utilization = 0.0000
+out_buf_0.Size = 1032 
+out_buf_0.MessageOccupancy = 0.00
+out_buf_0.ByteOccupancy = 0.00
+out_buf_0.Utilization = 0.0000
+
+[ Network.net-l1-all-to-l2-all.Node.l1-cu06 ]
+SentMessages = 8889
+SentBytes = 124744
+SendRate = 0.0008
+ReceivedMessages = 8889
+ReceivedBytes = 324936
+ReceiveRate = 0.0020
+in_buf_0.Size = 1032 
+in_buf_0.MessageOccupancy = 0.00
+in_buf_0.ByteOccupancy = 0.00
+in_buf_0.Utilization = 0.0000
+out_buf_0.Size = 1032 
+out_buf_0.MessageOccupancy = 0.00
+out_buf_0.ByteOccupancy = 0.00
+out_buf_0.Utilization = 0.0000
+
+[ Network.net-l1-all-to-l2-all.Node.l1-cu07 ]
+SentMessages = 14218
+SentBytes = 167376
+SendRate = 0.0010
+ReceivedMessages = 14218
+ReceivedBytes = 431568
+ReceiveRate = 0.0026
+in_buf_0.Size = 1032 
+in_buf_0.MessageOccupancy = 0.00
+in_buf_0.ByteOccupancy = 0.00
+in_buf_0.Utilization = 0.0000
+out_buf_0.Size = 1032 
+out_buf_0.MessageOccupancy = 0.00
+out_buf_0.ByteOccupancy = 0.00
+out_buf_0.Utilization = 0.0000
+
+[ Network.net-l1-all-to-l2-all.Node.l1-cu08 ]
+SentMessages = 9104
+SentBytes = 126400
+SendRate = 0.0008
+ReceivedMessages = 9104
+ReceivedBytes = 326592
+ReceiveRate = 0.0020
+in_buf_0.Size = 1032 
+in_buf_0.MessageOccupancy = 0.00
+in_buf_0.ByteOccupancy = 0.00
+in_buf_0.Utilization = 0.0000
+out_buf_0.Size = 1032 
+out_buf_0.MessageOccupancy = 0.00
+out_buf_0.ByteOccupancy = 0.00
+out_buf_0.Utilization = 0.0000
+
+[ Network.net-l1-all-to-l2-all.Node.l1-cu09 ]
+SentMessages = 14104
+SentBytes = 166464
+SendRate = 0.0010
+ReceivedMessages = 14104
+ReceivedBytes = 430656
+ReceiveRate = 0.0026
+in_buf_0.Size = 1032 
+in_buf_0.MessageOccupancy = 0.00
+in_buf_0.ByteOccupancy = 0.00
+in_buf_0.Utilization = 0.0000
+out_buf_0.Size = 1032 
+out_buf_0.MessageOccupancy = 0.00
+out_buf_0.ByteOccupancy = 0.00
+out_buf_0.Utilization = 0.0000
+
+[ Network.net-l1-all-to-l2-all.Node.Switch ]
+Config.BandWidth = 264
+SentMessages = 235668
+SentBytes = 5279200
+SendRate = 0.0320
+ReceivedMessages = 235668
+ReceivedBytes = 5279200
+ReceiveRate = 0.0320
+in_buf_0.Size = 1032 
+in_buf_0.MessageOccupancy = 0.00
+in_buf_0.ByteOccupancy = 0.00
+in_buf_0.Utilization = 0.0000
+in_buf_1.Size = 1032 
+in_buf_1.MessageOccupancy = 0.00
+in_buf_1.ByteOccupancy = 0.00
+in_buf_1.Utilization = 0.0000
+in_buf_2.Size = 1032 
+in_buf_2.MessageOccupancy = 0.00
+in_buf_2.ByteOccupancy = 0.00
+in_buf_2.Utilization = 0.0000
+in_buf_3.Size = 1032 
+in_buf_3.MessageOccupancy = 0.00
+in_buf_3.ByteOccupancy = 0.00
+in_buf_3.Utilization = 0.0000
+in_buf_4.Size = 1032 
+in_buf_4.MessageOccupancy = 0.00
+in_buf_4.ByteOccupancy = 0.00
+in_buf_4.Utilization = 0.0000
+in_buf_5.Size = 1032 
+in_buf_5.MessageOccupancy = 0.00
+in_buf_5.ByteOccupancy = 0.00
+in_buf_5.Utilization = 0.0000
+in_buf_6.Size = 1032 
+in_buf_6.MessageOccupancy = 0.00
+in_buf_6.ByteOccupancy = 0.00
+in_buf_6.Utilization = 0.0000
+in_buf_7.Size = 1032 
+in_buf_7.MessageOccupancy = 0.00
+in_buf_7.ByteOccupancy = 0.00
+in_buf_7.Utilization = 0.0000
+in_buf_8.Size = 1032 
+in_buf_8.MessageOccupancy = 0.00
+in_buf_8.ByteOccupancy = 0.00
+in_buf_8.Utilization = 0.0000
+in_buf_9.Size = 1032 
+in_buf_9.MessageOccupancy = 0.00
+in_buf_9.ByteOccupancy = 0.00
+in_buf_9.Utilization = 0.0000
+in_buf_10.Size = 1032 
+in_buf_10.MessageOccupancy = 0.00
+in_buf_10.ByteOccupancy = 0.00
+in_buf_10.Utilization = 0.0000
+in_buf_11.Size = 1032 
+in_buf_11.MessageOccupancy = 0.00
+in_buf_11.ByteOccupancy = 0.00
+in_buf_11.Utilization = 0.0000
+in_buf_12.Size = 1032 
+in_buf_12.MessageOccupancy = 0.00
+in_buf_12.ByteOccupancy = 0.00
+in_buf_12.Utilization = 0.0000
+in_buf_13.Size = 1032 
+in_buf_13.MessageOccupancy = 0.00
+in_buf_13.ByteOccupancy = 0.00
+in_buf_13.Utilization = 0.0000
+in_buf_14.Size = 1032 
+in_buf_14.MessageOccupancy = 0.00
+in_buf_14.ByteOccupancy = 0.00
+in_buf_14.Utilization = 0.0000
+out_buf_0.Size = 1032 
+out_buf_0.MessageOccupancy = 0.00
+out_buf_0.ByteOccupancy = 0.00
+out_buf_0.Utilization = 0.0000
+out_buf_1.Size = 1032 
+out_buf_1.MessageOccupancy = 0.00
+out_buf_1.ByteOccupancy = 0.00
+out_buf_1.Utilization = 0.0000
+out_buf_2.Size = 1032 
+out_buf_2.MessageOccupancy = 0.00
+out_buf_2.ByteOccupancy = 0.00
+out_buf_2.Utilization = 0.0000
+out_buf_3.Size = 1032 
+out_buf_3.MessageOccupancy = 0.00
+out_buf_3.ByteOccupancy = 0.00
+out_buf_3.Utilization = 0.0000
+out_buf_4.Size = 1032 
+out_buf_4.MessageOccupancy = 0.00
+out_buf_4.ByteOccupancy = 0.00
+out_buf_4.Utilization = 0.0000
+out_buf_5.Size = 1032 
+out_buf_5.MessageOccupancy = 0.00
+out_buf_5.ByteOccupancy = 0.00
+out_buf_5.Utilization = 0.0000
+out_buf_6.Size = 1032 
+out_buf_6.MessageOccupancy = 0.00
+out_buf_6.ByteOccupancy = 0.00
+out_buf_6.Utilization = 0.0000
+out_buf_7.Size = 1032 
+out_buf_7.MessageOccupancy = 0.00
+out_buf_7.ByteOccupancy = 0.00
+out_buf_7.Utilization = 0.0000
+out_buf_8.Size = 1032 
+out_buf_8.MessageOccupancy = 0.00
+out_buf_8.ByteOccupancy = 0.00
+out_buf_8.Utilization = 0.0000
+out_buf_9.Size = 1032 
+out_buf_9.MessageOccupancy = 0.00
+out_buf_9.ByteOccupancy = 0.00
+out_buf_9.Utilization = 0.0000
+out_buf_10.Size = 1032 
+out_buf_10.MessageOccupancy = 0.00
+out_buf_10.ByteOccupancy = 0.00
+out_buf_10.Utilization = 0.0000
+out_buf_11.Size = 1032 
+out_buf_11.MessageOccupancy = 0.00
+out_buf_11.ByteOccupancy = 0.00
+out_buf_11.Utilization = 0.0000
+out_buf_12.Size = 1032 
+out_buf_12.MessageOccupancy = 0.00
+out_buf_12.ByteOccupancy = 0.00
+out_buf_12.Utilization = 0.0000
+out_buf_13.Size = 1032 
+out_buf_13.MessageOccupancy = 0.00
+out_buf_13.ByteOccupancy = 0.00
+out_buf_13.Utilization = 0.0000
+out_buf_14.Size = 1032 
+out_buf_14.MessageOccupancy = 0.00
+out_buf_14.ByteOccupancy = 0.00
+out_buf_14.Utilization = 0.0000
+
+[ Network.net-l2-all-to-l3-all.General ]
+Transfers = 193810
+AverageMessageSize = 19.96
+AverageLatency = 4.0069
+
+[ Network.net-l2-all-to-l3-all.Link.link_<l3-0.out_buf_0>_<Switch.in_buf_0> ]
+Config.Bandwidth = 264
+TransferredMessages = 32996
+TransferredBytes = 1034208
+BusyCycles = 32996
+BytesPerCycle = 0.0063
+Utilization = 0.0000
+
+[ Network.net-l2-all-to-l3-all.Link.link_<Switch.out_buf_0>_<l3-0.in_buf_0> ]
+Config.Bandwidth = 264
+TransferredMessages = 32996
+TransferredBytes = 269152
+BusyCycles = 32996
+BytesPerCycle = 0.0016
+Utilization = 0.0000
+
+[ Network.net-l2-all-to-l3-all.Link.link_<l3-1.out_buf_0>_<Switch.in_buf_1> ]
+Config.Bandwidth = 264
+TransferredMessages = 31921
+TransferredBytes = 1024648
+BusyCycles = 31921
+BytesPerCycle = 0.0062
+Utilization = 0.0000
+
+[ Network.net-l2-all-to-l3-all.Link.link_<Switch.out_buf_1>_<l3-1.in_buf_0> ]
+Config.Bandwidth = 264
+TransferredMessages = 31921
+TransferredBytes = 262728
+BusyCycles = 31921
+BytesPerCycle = 0.0016
+Utilization = 0.0000
+
+[ Network.net-l2-all-to-l3-all.Link.link_<l3-2.out_buf_0>_<Switch.in_buf_2> ]
+Config.Bandwidth = 264
+TransferredMessages = 31988
+TransferredBytes = 1018656
+BusyCycles = 31988
+BytesPerCycle = 0.0062
+Utilization = 0.0000
+
+[ Network.net-l2-all-to-l3-all.Link.link_<Switch.out_buf_2>_<l3-2.in_buf_0> ]
+Config.Bandwidth = 264
+TransferredMessages = 31988
+TransferredBytes = 259552
+BusyCycles = 31988
+BytesPerCycle = 0.0016
+Utilization = 0.0000
+
+[ Network.net-l2-all-to-l3-all.Link.link_<l2-0.out_buf_0>_<Switch.in_buf_3> ]
+Config.Bandwidth = 264
+TransferredMessages = 19515
+TransferredBytes = 159384
+BusyCycles = 19515
+BytesPerCycle = 0.0010
+Utilization = 0.0000
+
+[ Network.net-l2-all-to-l3-all.Link.link_<Switch.out_buf_3>_<l2-0.in_buf_0> ]
+Config.Bandwidth = 264
+TransferredMessages = 19515
+TransferredBytes = 616856
+BusyCycles = 19515
+BytesPerCycle = 0.0037
+Utilization = 0.0000
+
+[ Network.net-l2-all-to-l3-all.Link.link_<l2-1.out_buf_0>_<Switch.in_buf_4> ]
+Config.Bandwidth = 264
+TransferredMessages = 19272
+TransferredBytes = 157568
+BusyCycles = 19272
+BytesPerCycle = 0.0010
+Utilization = 0.0000
+
+[ Network.net-l2-all-to-l3-all.Link.link_<Switch.out_buf_4>_<l2-1.in_buf_0> ]
+Config.Bandwidth = 264
+TransferredMessages = 19272
+TransferredBytes = 614848
+BusyCycles = 19272
+BytesPerCycle = 0.0037
+Utilization = 0.0000
+
+[ Network.net-l2-all-to-l3-all.Link.link_<l2-2.out_buf_0>_<Switch.in_buf_5> ]
+Config.Bandwidth = 264
+TransferredMessages = 19343
+TransferredBytes = 157752
+BusyCycles = 19343
+BytesPerCycle = 0.0010
+Utilization = 0.0000
+
+[ Network.net-l2-all-to-l3-all.Link.link_<Switch.out_buf_5>_<l2-2.in_buf_0> ]
+Config.Bandwidth = 264
+TransferredMessages = 19343
+TransferredBytes = 614904
+BusyCycles = 19343
+BytesPerCycle = 0.0037
+Utilization = 0.0000
+
+[ Network.net-l2-all-to-l3-all.Link.link_<l2-3.out_buf_0>_<Switch.in_buf_6> ]
+Config.Bandwidth = 264
+TransferredMessages = 19316
+TransferredBytes = 157856
+BusyCycles = 19316
+BytesPerCycle = 0.0010
+Utilization = 0.0000
+
+[ Network.net-l2-all-to-l3-all.Link.link_<Switch.out_buf_6>_<l2-3.in_buf_0> ]
+Config.Bandwidth = 264
+TransferredMessages = 19316
+TransferredBytes = 614944
+BusyCycles = 19316
+BytesPerCycle = 0.0037
+Utilization = 0.0000
+
+[ Network.net-l2-all-to-l3-all.Link.link_<l2-4.out_buf_0>_<Switch.in_buf_7> ]
+Config.Bandwidth = 264
+TransferredMessages = 19459
+TransferredBytes = 158872
+BusyCycles = 19459
+BytesPerCycle = 0.0010
+Utilization = 0.0000
+
+[ Network.net-l2-all-to-l3-all.Link.link_<Switch.out_buf_7>_<l2-4.in_buf_0> ]
+Config.Bandwidth = 264
+TransferredMessages = 19459
+TransferredBytes = 615960
+BusyCycles = 19459
+BytesPerCycle = 0.0037
+Utilization = 0.0000
+
+[ Network.net-l2-all-to-l3-all.Node.l3-0 ]
+SentMessages = 32996
+SentBytes = 1034208
+SendRate = 0.0063
+ReceivedMessages = 32996
+ReceivedBytes = 269152
+ReceiveRate = 0.0016
+in_buf_0.Size = 1032 
+in_buf_0.MessageOccupancy = 0.00
+in_buf_0.ByteOccupancy = 0.00
+in_buf_0.Utilization = 0.0000
+out_buf_0.Size = 1032 
+out_buf_0.MessageOccupancy = 0.00
+out_buf_0.ByteOccupancy = 0.01
+out_buf_0.Utilization = 0.0000
+
+[ Network.net-l2-all-to-l3-all.Node.l3-1 ]
+SentMessages = 31921
+SentBytes = 1024648
+SendRate = 0.0062
+ReceivedMessages = 31921
+ReceivedBytes = 262728
+ReceiveRate = 0.0016
+in_buf_0.Size = 1032 
+in_buf_0.MessageOccupancy = 0.00
+in_buf_0.ByteOccupancy = 0.00
+in_buf_0.Utilization = 0.0000
+out_buf_0.Size = 1032 
+out_buf_0.MessageOccupancy = 0.00
+out_buf_0.ByteOccupancy = 0.01
+out_buf_0.Utilization = 0.0000
+
+[ Network.net-l2-all-to-l3-all.Node.l3-2 ]
+SentMessages = 31988
+SentBytes = 1018656
+SendRate = 0.0062
+ReceivedMessages = 31988
+ReceivedBytes = 259552
+ReceiveRate = 0.0016
+in_buf_0.Size = 1032 
+in_buf_0.MessageOccupancy = 0.00
+in_buf_0.ByteOccupancy = 0.00
+in_buf_0.Utilization = 0.0000
+out_buf_0.Size = 1032 
+out_buf_0.MessageOccupancy = 0.00
+out_buf_0.ByteOccupancy = 0.01
+out_buf_0.Utilization = 0.0000
+
+[ Network.net-l2-all-to-l3-all.Node.l2-0 ]
+SentMessages = 19515
+SentBytes = 159384
+SendRate = 0.0010
+ReceivedMessages = 19515
+ReceivedBytes = 616856
+ReceiveRate = 0.0037
+in_buf_0.Size = 1032 
+in_buf_0.MessageOccupancy = 0.00
+in_buf_0.ByteOccupancy = 0.00
+in_buf_0.Utilization = 0.0000
+out_buf_0.Size = 1032 
+out_buf_0.MessageOccupancy = 0.00
+out_buf_0.ByteOccupancy = 0.00
+out_buf_0.Utilization = 0.0000
+
+[ Network.net-l2-all-to-l3-all.Node.l2-1 ]
+SentMessages = 19272
+SentBytes = 157568
+SendRate = 0.0010
+ReceivedMessages = 19272
+ReceivedBytes = 614848
+ReceiveRate = 0.0037
+in_buf_0.Size = 1032 
+in_buf_0.MessageOccupancy = 0.00
+in_buf_0.ByteOccupancy = 0.00
+in_buf_0.Utilization = 0.0000
+out_buf_0.Size = 1032 
+out_buf_0.MessageOccupancy = 0.00
+out_buf_0.ByteOccupancy = 0.00
+out_buf_0.Utilization = 0.0000
+
+[ Network.net-l2-all-to-l3-all.Node.l2-2 ]
+SentMessages = 19343
+SentBytes = 157752
+SendRate = 0.0010
+ReceivedMessages = 19343
+ReceivedBytes = 614904
+ReceiveRate = 0.0037
+in_buf_0.Size = 1032 
+in_buf_0.MessageOccupancy = 0.00
+in_buf_0.ByteOccupancy = 0.00
+in_buf_0.Utilization = 0.0000
+out_buf_0.Size = 1032 
+out_buf_0.MessageOccupancy = 0.00
+out_buf_0.ByteOccupancy = 0.00
+out_buf_0.Utilization = 0.0000
+
+[ Network.net-l2-all-to-l3-all.Node.l2-3 ]
+SentMessages = 19316
+SentBytes = 157856
+SendRate = 0.0010
+ReceivedMessages = 19316
+ReceivedBytes = 614944
+ReceiveRate = 0.0037
+in_buf_0.Size = 1032 
+in_buf_0.MessageOccupancy = 0.00
+in_buf_0.ByteOccupancy = 0.00
+in_buf_0.Utilization = 0.0000
+out_buf_0.Size = 1032 
+out_buf_0.MessageOccupancy = 0.00
+out_buf_0.ByteOccupancy = 0.00
+out_buf_0.Utilization = 0.0000
+
+[ Network.net-l2-all-to-l3-all.Node.l2-4 ]
+SentMessages = 19459
+SentBytes = 158872
+SendRate = 0.0010
+ReceivedMessages = 19459
+ReceivedBytes = 615960
+ReceiveRate = 0.0037
+in_buf_0.Size = 1032 
+in_buf_0.MessageOccupancy = 0.00
+in_buf_0.ByteOccupancy = 0.00
+in_buf_0.Utilization = 0.0000
+out_buf_0.Size = 1032 
+out_buf_0.MessageOccupancy = 0.00
+out_buf_0.ByteOccupancy = 0.00
+out_buf_0.Utilization = 0.0000
+
+[ Network.net-l2-all-to-l3-all.Node.Switch ]
+Config.BandWidth = 264
+SentMessages = 193810
+SentBytes = 3868944
+SendRate = 0.0235
+ReceivedMessages = 193810
+ReceivedBytes = 3868944
+ReceiveRate = 0.0235
+in_buf_0.Size = 1032 
+in_buf_0.MessageOccupancy = 0.00
+in_buf_0.ByteOccupancy = 0.01
+in_buf_0.Utilization = 0.0000
+in_buf_1.Size = 1032 
+in_buf_1.MessageOccupancy = 0.00
+in_buf_1.ByteOccupancy = 0.01
+in_buf_1.Utilization = 0.0000
+in_buf_2.Size = 1032 
+in_buf_2.MessageOccupancy = 0.00
+in_buf_2.ByteOccupancy = 0.01
+in_buf_2.Utilization = 0.0000
+in_buf_3.Size = 1032 
+in_buf_3.MessageOccupancy = 0.00
+in_buf_3.ByteOccupancy = 0.00
+in_buf_3.Utilization = 0.0000
+in_buf_4.Size = 1032 
+in_buf_4.MessageOccupancy = 0.00
+in_buf_4.ByteOccupancy = 0.00
+in_buf_4.Utilization = 0.0000
+in_buf_5.Size = 1032 
+in_buf_5.MessageOccupancy = 0.00
+in_buf_5.ByteOccupancy = 0.00
+in_buf_5.Utilization = 0.0000
+in_buf_6.Size = 1032 
+in_buf_6.MessageOccupancy = 0.00
+in_buf_6.ByteOccupancy = 0.00
+in_buf_6.Utilization = 0.0000
+in_buf_7.Size = 1032 
+in_buf_7.MessageOccupancy = 0.00
+in_buf_7.ByteOccupancy = 0.00
+in_buf_7.Utilization = 0.0000
+out_buf_0.Size = 1032 
+out_buf_0.MessageOccupancy = 0.00
+out_buf_0.ByteOccupancy = 0.00
+out_buf_0.Utilization = 0.0000
+out_buf_1.Size = 1032 
+out_buf_1.MessageOccupancy = 0.00
+out_buf_1.ByteOccupancy = 0.00
+out_buf_1.Utilization = 0.0000
+out_buf_2.Size = 1032 
+out_buf_2.MessageOccupancy = 0.00
+out_buf_2.ByteOccupancy = 0.00
+out_buf_2.Utilization = 0.0000
+out_buf_3.Size = 1032 
+out_buf_3.MessageOccupancy = 0.00
+out_buf_3.ByteOccupancy = 0.00
+out_buf_3.Utilization = 0.0000
+out_buf_4.Size = 1032 
+out_buf_4.MessageOccupancy = 0.00
+out_buf_4.ByteOccupancy = 0.00
+out_buf_4.Utilization = 0.0000
+out_buf_5.Size = 1032 
+out_buf_5.MessageOccupancy = 0.00
+out_buf_5.ByteOccupancy = 0.00
+out_buf_5.Utilization = 0.0000
+out_buf_6.Size = 1032 
+out_buf_6.MessageOccupancy = 0.00
+out_buf_6.ByteOccupancy = 0.00
+out_buf_6.Utilization = 0.0000
+out_buf_7.Size = 1032 
+out_buf_7.MessageOccupancy = 0.00
+out_buf_7.ByteOccupancy = 0.00
+out_buf_7.Utilization = 0.0000
+
+[ Network.net-l3-0-to-mm-0.General ]
+Transfers = 20396
+AverageMessageSize = 150.84
+AverageLatency = 4.8370
+
+[ Network.net-l3-0-to-mm-0.Link.link_<mm-0.out_buf_0>_<Switch.in_buf_0> ]
+Config.Bandwidth = 264
+TransferredMessages = 10198
+TransferredBytes = 2979504
+BusyCycles = 15858
+BytesPerCycle = 0.0181
+Utilization = 0.0001
+
+[ Network.net-l3-0-to-mm-0.Link.link_<Switch.out_buf_0>_<mm-0.in_buf_0> ]
+Config.Bandwidth = 264
+TransferredMessages = 10198
+TransferredBytes = 96944
+BusyCycles = 10228
+BytesPerCycle = 0.0006
+Utilization = 0.0000
+
+[ Network.net-l3-0-to-mm-0.Link.link_<l3-0.out_buf_0>_<Switch.in_buf_1> ]
+Config.Bandwidth = 264
+TransferredMessages = 10198
+TransferredBytes = 96944
+BusyCycles = 10228
+BytesPerCycle = 0.0006
+Utilization = 0.0000
+
+[ Network.net-l3-0-to-mm-0.Link.link_<Switch.out_buf_1>_<l3-0.in_buf_0> ]
+Config.Bandwidth = 264
+TransferredMessages = 10198
+TransferredBytes = 2979504
+BusyCycles = 15858
+BytesPerCycle = 0.0181
+Utilization = 0.0001
+
+[ Network.net-l3-0-to-mm-0.Node.mm-0 ]
+SentMessages = 10198
+SentBytes = 2979504
+SendRate = 0.0181
+ReceivedMessages = 10198
+ReceivedBytes = 96944
+ReceiveRate = 0.0006
+in_buf_0.Size = 1032 
+in_buf_0.MessageOccupancy = 0.00
+in_buf_0.ByteOccupancy = 0.00
+in_buf_0.Utilization = 0.0000
+out_buf_0.Size = 1032 
+out_buf_0.MessageOccupancy = 0.00
+out_buf_0.ByteOccupancy = 0.02
+out_buf_0.Utilization = 0.0000
+
+[ Network.net-l3-0-to-mm-0.Node.l3-0 ]
+SentMessages = 10198
+SentBytes = 96944
+SendRate = 0.0006
+ReceivedMessages = 10198
+ReceivedBytes = 2979504
+ReceiveRate = 0.0181
+in_buf_0.Size = 1032 
+in_buf_0.MessageOccupancy = 0.00
+in_buf_0.ByteOccupancy = 0.04
+in_buf_0.Utilization = 0.0000
+out_buf_0.Size = 1032 
+out_buf_0.MessageOccupancy = 0.00
+out_buf_0.ByteOccupancy = 0.00
+out_buf_0.Utilization = 0.0000
+
+[ Network.net-l3-0-to-mm-0.Node.Switch ]
+Config.BandWidth = 264
+SentMessages = 20396
+SentBytes = 3076448
+SendRate = 0.0187
+ReceivedMessages = 20396
+ReceivedBytes = 3076448
+ReceiveRate = 0.0187
+in_buf_0.Size = 1032 
+in_buf_0.MessageOccupancy = 0.00
+in_buf_0.ByteOccupancy = 0.04
+in_buf_0.Utilization = 0.0000
+in_buf_1.Size = 1032 
+in_buf_1.MessageOccupancy = 0.00
+in_buf_1.ByteOccupancy = 0.00
+in_buf_1.Utilization = 0.0000
+out_buf_0.Size = 1032 
+out_buf_0.MessageOccupancy = 0.00
+out_buf_0.ByteOccupancy = 0.00
+out_buf_0.Utilization = 0.0000
+out_buf_1.Size = 1032 
+out_buf_1.MessageOccupancy = 0.00
+out_buf_1.ByteOccupancy = 0.04
+out_buf_1.Utilization = 0.0000
+
+[ Network.net-l3-1-to-mm-1.General ]
+Transfers = 20108
+AverageMessageSize = 152.70
+AverageLatency = 4.8479
+
+[ Network.net-l3-1-to-mm-1.Link.link_<mm-1.out_buf_0>_<Switch.in_buf_0> ]
+Config.Bandwidth = 264
+TransferredMessages = 10054
+TransferredBytes = 2977840
+BusyCycles = 15713
+BytesPerCycle = 0.0181
+Utilization = 0.0001
+
+[ Network.net-l3-1-to-mm-1.Link.link_<Switch.out_buf_0>_<mm-1.in_buf_0> ]
+Config.Bandwidth = 264
+TransferredMessages = 10054
+TransferredBytes = 92720
+BusyCycles = 10078
+BytesPerCycle = 0.0006
+Utilization = 0.0000
+
+[ Network.net-l3-1-to-mm-1.Link.link_<l3-1.out_buf_0>_<Switch.in_buf_1> ]
+Config.Bandwidth = 264
+TransferredMessages = 10054
+TransferredBytes = 92720
+BusyCycles = 10078
+BytesPerCycle = 0.0006
+Utilization = 0.0000
+
+[ Network.net-l3-1-to-mm-1.Link.link_<Switch.out_buf_1>_<l3-1.in_buf_0> ]
+Config.Bandwidth = 264
+TransferredMessages = 10054
+TransferredBytes = 2977840
+BusyCycles = 15713
+BytesPerCycle = 0.0181
+Utilization = 0.0001
+
+[ Network.net-l3-1-to-mm-1.Node.mm-1 ]
+SentMessages = 10054
+SentBytes = 2977840
+SendRate = 0.0181
+ReceivedMessages = 10054
+ReceivedBytes = 92720
+ReceiveRate = 0.0006
+in_buf_0.Size = 1032 
+in_buf_0.MessageOccupancy = 0.00
+in_buf_0.ByteOccupancy = 0.00
+in_buf_0.Utilization = 0.0000
+out_buf_0.Size = 1032 
+out_buf_0.MessageOccupancy = 0.00
+out_buf_0.ByteOccupancy = 0.02
+out_buf_0.Utilization = 0.0000
+
+[ Network.net-l3-1-to-mm-1.Node.l3-1 ]
+SentMessages = 10054
+SentBytes = 92720
+SendRate = 0.0006
+ReceivedMessages = 10054
+ReceivedBytes = 2977840
+ReceiveRate = 0.0181
+in_buf_0.Size = 1032 
+in_buf_0.MessageOccupancy = 0.00
+in_buf_0.ByteOccupancy = 0.04
+in_buf_0.Utilization = 0.0000
+out_buf_0.Size = 1032 
+out_buf_0.MessageOccupancy = 0.00
+out_buf_0.ByteOccupancy = 0.00
+out_buf_0.Utilization = 0.0000
+
+[ Network.net-l3-1-to-mm-1.Node.Switch ]
+Config.BandWidth = 264
+SentMessages = 20108
+SentBytes = 3070560
+SendRate = 0.0186
+ReceivedMessages = 20108
+ReceivedBytes = 3070560
+ReceiveRate = 0.0186
+in_buf_0.Size = 1032 
+in_buf_0.MessageOccupancy = 0.00
+in_buf_0.ByteOccupancy = 0.04
+in_buf_0.Utilization = 0.0000
+in_buf_1.Size = 1032 
+in_buf_1.MessageOccupancy = 0.00
+in_buf_1.ByteOccupancy = 0.00
+in_buf_1.Utilization = 0.0000
+out_buf_0.Size = 1032 
+out_buf_0.MessageOccupancy = 0.00
+out_buf_0.ByteOccupancy = 0.00
+out_buf_0.Utilization = 0.0000
+out_buf_1.Size = 1032 
+out_buf_1.MessageOccupancy = 0.00
+out_buf_1.ByteOccupancy = 0.04
+out_buf_1.Utilization = 0.0000
+
+[ Network.net-l3-2-to-mm-2.General ]
+Transfers = 20330
+AverageMessageSize = 150.77
+AverageLatency = 4.8367
+
+[ Network.net-l3-2-to-mm-2.Link.link_<mm-2.out_buf_0>_<Switch.in_buf_0> ]
+Config.Bandwidth = 264
+TransferredMessages = 10165
+TransferredBytes = 2973608
+BusyCycles = 15814
+BytesPerCycle = 0.0180
+Utilization = 0.0001
+
+[ Network.net-l3-2-to-mm-2.Link.link_<Switch.out_buf_0>_<mm-2.in_buf_0> ]
+Config.Bandwidth = 264
+TransferredMessages = 10165
+TransferredBytes = 91560
+BusyCycles = 10185
+BytesPerCycle = 0.0006
+Utilization = 0.0000
+
+[ Network.net-l3-2-to-mm-2.Link.link_<l3-2.out_buf_0>_<Switch.in_buf_1> ]
+Config.Bandwidth = 264
+TransferredMessages = 10165
+TransferredBytes = 91560
+BusyCycles = 10185
+BytesPerCycle = 0.0006
+Utilization = 0.0000
+
+[ Network.net-l3-2-to-mm-2.Link.link_<Switch.out_buf_1>_<l3-2.in_buf_0> ]
+Config.Bandwidth = 264
+TransferredMessages = 10165
+TransferredBytes = 2973608
+BusyCycles = 15814
+BytesPerCycle = 0.0180
+Utilization = 0.0001
+
+[ Network.net-l3-2-to-mm-2.Node.mm-2 ]
+SentMessages = 10165
+SentBytes = 2973608
+SendRate = 0.0180
+ReceivedMessages = 10165
+ReceivedBytes = 91560
+ReceiveRate = 0.0006
+in_buf_0.Size = 1032 
+in_buf_0.MessageOccupancy = 0.00
+in_buf_0.ByteOccupancy = 0.00
+in_buf_0.Utilization = 0.0000
+out_buf_0.Size = 1032 
+out_buf_0.MessageOccupancy = 0.00
+out_buf_0.ByteOccupancy = 0.02
+out_buf_0.Utilization = 0.0000
+
+[ Network.net-l3-2-to-mm-2.Node.l3-2 ]
+SentMessages = 10165
+SentBytes = 91560
+SendRate = 0.0006
+ReceivedMessages = 10165
+ReceivedBytes = 2973608
+ReceiveRate = 0.0180
+in_buf_0.Size = 1032 
+in_buf_0.MessageOccupancy = 0.00
+in_buf_0.ByteOccupancy = 0.04
+in_buf_0.Utilization = 0.0000
+out_buf_0.Size = 1032 
+out_buf_0.MessageOccupancy = 0.00
+out_buf_0.ByteOccupancy = 0.00
+out_buf_0.Utilization = 0.0000
+
+[ Network.net-l3-2-to-mm-2.Node.Switch ]
+Config.BandWidth = 264
+SentMessages = 20330
+SentBytes = 3065168
+SendRate = 0.0186
+ReceivedMessages = 20330
+ReceivedBytes = 3065168
+ReceiveRate = 0.0186
+in_buf_0.Size = 1032 
+in_buf_0.MessageOccupancy = 0.00
+in_buf_0.ByteOccupancy = 0.04
+in_buf_0.Utilization = 0.0000
+in_buf_1.Size = 1032 
+in_buf_1.MessageOccupancy = 0.00
+in_buf_1.ByteOccupancy = 0.00
+in_buf_1.Utilization = 0.0000
+out_buf_0.Size = 1032 
+out_buf_0.MessageOccupancy = 0.00
+out_buf_0.ByteOccupancy = 0.00
+out_buf_0.Utilization = 0.0000
+out_buf_1.Size = 1032 
+out_buf_1.MessageOccupancy = 0.00
+out_buf_1.ByteOccupancy = 0.04
+out_buf_1.Utilization = 0.0000
+
